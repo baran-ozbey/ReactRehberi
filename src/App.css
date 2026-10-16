@@ -1,0 +1,9 @@
+.uygulama {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.uygulama-icerik {
+  flex: 1;
+}

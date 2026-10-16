@@ -1,0 +1,150 @@
+.iletisim__icerik {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.iletisim__bilgiler {
+  height: 100%;
+}
+
+.iletisim__bilgiler h3, .iletisim__form h3 {
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.iletisim__bilgiler p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.iletisim__liste {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.iletisim__liste li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.iletisim__ikon {
+  font-size: 1.5rem;
+  background: rgba(97, 218, 251, 0.1);
+  padding: 0.8rem;
+  border-radius: 12px;
+}
+
+.iletisim__liste li div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.iletisim__liste li strong {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.iletisim__liste li span {
+  color: var(--text-secondary);
+}
+
+.iletisim__sosyal {
+  display: flex;
+  gap: 1rem;
+}
+
+.iletisim__sosyal-link {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.iletisim__sosyal-link:hover {
+  background: rgba(97, 218, 251, 0.2);
+  border-color: rgba(97, 218, 251, 0.5);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.iletisim__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.iletisim__form-grup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.iletisim__form-grup label {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.iletisim__form-grup input,
+.iletisim__form-grup textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.iletisim__form-grup input:focus,
+.iletisim__form-grup textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.2);
+}
+
+.iletisim__form-grup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.iletisim__basari {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.5);
+  color: #10b981;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .iletisim__icerik {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,135 @@
+.kavramlar__sekmeler {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.kavramlar__sekmeler::-webkit-scrollbar {
+  height: 4px;
+}
+
+.kavramlar__sekmeler::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.kavramlar__sekmeler::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.kavramlar__sekme-buton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.kavramlar__sekme-buton:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.kavramlar__sekme-buton--aktif {
+  background: rgba(168, 85, 247, 0.15);
+  border-color: rgba(168, 85, 247, 0.5);
+  color: var(--text-primary);
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.2);
+}
+
+.kavramlar__sekme-ikon {
+  font-size: 1.2rem;
+}
+
+.kavramlar__icerik {
+  padding: 2.5rem;
+  min-height: 350px;
+}
+
+.kavramlar__icerik-animasyon {
+  animation: tabSwitch 0.4s ease-out;
+}
+
+.kavramlar__aciklama {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  margin-bottom: 2.5rem;
+}
+
+.kavramlar__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.kavramlar__kolon-baslik {
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.kavramlar__kolon:nth-child(2) .kavramlar__kolon-baslik {
+  color: var(--color-secondary);
+}
+
+.kavramlar__liste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kavramlar__liste li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.kavramlar__liste li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+}
+
+.kavramlar__liste--ikincil li::before {
+  color: var(--color-secondary);
+  content: '✓';
+}
+
+@keyframes tabSwitch {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .kavramlar__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .kavramlar__icerik {
+    padding: 1.5rem;
+  }
+}

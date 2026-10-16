@@ -1,0 +1,8 @@
+.tilt-karti {
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.tilt-karti > * {
+  transform: translateZ(30px);
+}

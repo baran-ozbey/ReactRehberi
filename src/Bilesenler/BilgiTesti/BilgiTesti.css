@@ -1,0 +1,267 @@
+.bilgi-testi__konteyner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bilgi-testi__ilerleme-cubugu {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.bilgi-testi__ilerleme {
+  height: 100%;
+  background: var(--primary-gradient);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.bilgi-testi__ilerleme-metni {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.bilgi-testi__numaralar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.bilgi-testi__numara {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.bilgi-testi__numara--gecmis {
+  background: rgba(168, 85, 247, 0.2);
+  border-color: rgba(168, 85, 247, 0.5);
+  color: var(--color-primary);
+}
+
+.bilgi-testi__numara--aktif {
+  background: rgba(168, 85, 247, 0.1);
+  border-color: var(--color-primary);
+  color: var(--text-primary);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+  transform: scale(1.1);
+}
+
+.bilgi-testi__kart {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.bilgi-testi__kart-baslik {
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.bilgi-testi__soru-metni {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.bilgi-testi__secenekler {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.bilgi-testi__secenek {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.bilgi-testi__secenek:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.bilgi-testi__harf {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.bilgi-testi__secenek-metin {
+  flex: 1;
+}
+
+.bilgi-testi__secenek--secili {
+  background: rgba(168, 85, 247, 0.1);
+  border-color: var(--color-primary);
+  color: var(--text-primary);
+}
+
+.bilgi-testi__secenek--secili .bilgi-testi__harf {
+  background: var(--color-primary);
+  color: white;
+}
+
+.bilgi-testi__secenek--dogru {
+  background: rgba(16, 185, 129, 0.1) !important;
+  border-color: #10b981 !important;
+  color: #10b981 !important;
+}
+
+.bilgi-testi__secenek--dogru .bilgi-testi__harf {
+  background: #10b981;
+  color: white;
+}
+
+.bilgi-testi__secenek--yanlis {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border-color: #ef4444 !important;
+  color: #ef4444 !important;
+}
+
+.bilgi-testi__secenek--yanlis .bilgi-testi__harf {
+  background: #ef4444;
+  color: white;
+}
+
+.bilgi-testi__secenek--pasif {
+  opacity: 0.5;
+}
+
+.bilgi-testi__ikon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.bilgi-testi__geri-bildirim {
+  animation: fadeIn 0.4s ease;
+}
+
+.bilgi-testi__aciklama-kutusu {
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.bilgi-testi__aciklama-kutusu--dogru {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: #a7f3d0;
+}
+
+.bilgi-testi__aciklama-kutusu--yanlis {
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  color: #e9d5ff;
+}
+
+.bilgi-testi__onay-buton,
+.bilgi-testi__ileri-buton {
+  align-self: flex-end;
+}
+
+.bilgi-testi__sonuc {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.bilgi-testi__sonuc-ikon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+.bilgi-testi__sonuc-baslik {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.bilgi-testi__skor {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+.bilgi-testi__degerlendirme {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  margin-bottom: 2rem;
+}
+
+.bilgi-testi__sonuc-metin {
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.titreme-efekti {
+  animation: titreme 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes titreme {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-20px); }
+  60% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+  .bilgi-testi__kart {
+    padding: 1.5rem;
+  }
+  
+  .bilgi-testi__secenek {
+    padding: 0.8rem 1rem;
+  }
+}

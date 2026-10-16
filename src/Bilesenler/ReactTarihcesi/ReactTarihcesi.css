@@ -1,0 +1,160 @@
+.tarihce {
+  overflow: hidden;
+}
+
+.tarihce__dis-konteyner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 2rem 0;
+}
+
+.tarihce__serit {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 180px 80px;
+  gap: 0;
+  flex: 1;
+  position: relative;
+}
+
+.tarihce__serit::-webkit-scrollbar {
+  display: none;
+}
+
+.tarihce__orta-cizgi {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #61dafb, #3178c6, #a855f7, transparent);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.tarihce__olay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 280px;
+  scroll-snap-align: center;
+  position: relative;
+}
+
+.tarihce__olay--ust {
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.tarihce__olay--alt {
+  flex-direction: column-reverse;
+  padding-top: 40px;
+}
+
+.tarihce__nokta {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #61dafb, #3178c6);
+  border: 3px solid #0a0a1a;
+  flex-shrink: 0;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarihce__olay:hover .tarihce__nokta {
+  transform: scale(1.5);
+  box-shadow: 0 0 12px #61dafb;
+}
+
+.tarihce__kart {
+  width: 240px;
+  padding: 18px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.tarihce__olay:hover .tarihce__kart {
+  transform: translateY(-6px);
+  box-shadow: 0 0 24px rgba(97, 218, 251, 0.2);
+}
+
+.tarihce__kart-baslik {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.tarihce__ikon {
+  font-size: 1.4rem;
+}
+
+.tarihce__yil-etiketi {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #61dafb;
+  background: rgba(97, 218, 251, 0.12);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.tarihce__baslik {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.tarihce__aciklama {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tarihce__ok {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(97, 218, 251, 0.1);
+  border: 1px solid rgba(97, 218, 251, 0.3);
+  color: #61dafb;
+  font-size: 1.2rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 2;
+}
+
+.tarihce__ok--sol { margin-left: 16px; }
+.tarihce__ok--sag { margin-right: 16px; }
+
+.tarihce__ok:hover {
+  background: rgba(97, 218, 251, 0.2);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .tarihce__kart {
+    width: 200px;
+    padding: 14px;
+  }
+
+  .tarihce__olay {
+    width: 220px;
+  }
+
+  .tarihce__aciklama {
+    display: none;
+  }
+}

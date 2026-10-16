@@ -1,0 +1,124 @@
+.alt-menu {
+  background-color: var(--bg-primary);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  padding-top: 4rem;
+}
+
+.alt-menu__ust-cizgi {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-primary) 30%,
+    var(--color-secondary) 70%,
+    transparent 100%
+  );
+  opacity: 0.5;
+}
+
+.alt-menu__konteyner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.alt-menu__logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.alt-menu__logo-ikon {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.6));
+}
+
+.alt-menu__aciklama {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 400px;
+}
+
+.alt-menu__baslik {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.alt-menu__linkler ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.alt-menu__linkler a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.alt-menu__linkler a:hover {
+  color: var(--color-primary);
+}
+
+.alt-menu__alt-kisim {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.alt-menu__telif {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.alt-menu__yukari-buton {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.alt-menu__yukari-buton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .alt-menu__konteyner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .alt-menu__alt-kisim {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

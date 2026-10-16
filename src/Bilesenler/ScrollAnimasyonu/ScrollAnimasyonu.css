@@ -1,0 +1,27 @@
+.scroll-animasyonu {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
+
+.scroll-animasyonu--gorunur {
+  opacity: 1;
+  transform: translate(0) scale(1) !important;
+}
+
+.scroll-animasyonu--fade-up {
+  transform: translateY(40px);
+}
+
+.scroll-animasyonu--fade-left {
+  transform: translateX(40px);
+}
+
+.scroll-animasyonu--fade-right {
+  transform: translateX(-40px);
+}
+
+.scroll-animasyonu--zoom-in {
+  transform: scale(0.95);
+}
